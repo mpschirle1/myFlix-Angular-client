@@ -1,0 +1,46 @@
+$primary: #1c6b2b;
+$background: #1a1e24;
+$text: #e8e6e3;
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, $primary, #004f87, #008765, #2a315d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  color: $text;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.welcome-card {
+  margin: 25vh auto auto auto;
+  flex-direction: column;
+  box-shadow: 2px 1px 10px 0.5px #000;
+  background: $background;
+  padding: 3%;
+
+  button {
+    background-color: $primary;
+  }
+}
+
+.mdc-card__actions {
+  justify-content: space-evenly;
+}

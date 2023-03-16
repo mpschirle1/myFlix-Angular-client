@@ -1,0 +1,29 @@
+$primary: #1c6b2b;
+$background: #1a1e24;
+$text: #e8e6e3;
+
+mat-card {
+  background-color: $background;
+  color: $text;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  flex-direction: column;
+
+  button {
+    background-color: $primary;
+  }
+}
+
+mat-card-header {
+  font-family: "Rubik Dirt", cursive;
+  font-size: 1.5em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: $text;
+}
+
+.mdc-card__actions {
+  justify-content: center;
+}

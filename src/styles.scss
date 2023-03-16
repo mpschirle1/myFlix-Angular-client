@@ -1,0 +1,32 @@
+$primary: #1c6b2b;
+$background: #1a1e24;
+$text: #e8e6e3;
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Rubik+Dirt&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1 {
+  font-family: "Rubik Dirt", cursive;
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+}
+
+button {
+  background-color: $primary;
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-color: $background;
+  --mdc-dialog-with-divider-divider-color: rgba(0, 0, 0, 0.12);
+  --mdc-dialog-subhead-color: rgba(0, 0, 0, 0.87);
+  --mdc-dialog-supporting-text-color: rgba(0, 0, 0, 0.6);
+}
