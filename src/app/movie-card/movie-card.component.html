@@ -9,14 +9,31 @@
       }}</mat-card-title>
       <mat-card-subtitle class="subtitle"
         >Directed by:
-        <button mat-button color="primary">
+        <button
+          mat-button
+          color="primary"
+          (click)="
+            openDirectorDialog(
+              movie.Director.Name,
+              movie.Director.Birth,
+              movie.Director.Death,
+              movie.Director.Bio
+            )
+          "
+        >
           {{ movie.Director.Name }}
         </button></mat-card-subtitle
       >
     </mat-card-header>
     <mat-card-actions>
       {{ movie.ReleaseYear }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ movie.Rating }}
-      <button mat-button color="primary">{{ movie.Genre.Name }}</button>
+      <button
+        mat-button
+        color="primary"
+        (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)"
+      >
+        {{ movie.Genre.Name }}
+      </button>
       <button mat-button color="primary">Synopsis</button>
       <mat-icon>favorite_border</mat-icon>
     </mat-card-actions>

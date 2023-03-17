@@ -1,0 +1,16 @@
+<mat-card class="director">
+  <mat-card-header class="director-header">
+    <mat-card-title
+      ><h1 class="name">{{ data.Name }}</h1>
+      <h3 class="dob">
+        {{ data.Birth }} &#8212; {{ data.Death }}
+      </h3></mat-card-title
+    >
+    <mat-card-actions>
+      <button class="close-button" mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card-header>
+  <mat-card-content class="director-bio">{{ data.Bio }}</mat-card-content>
+</mat-card>

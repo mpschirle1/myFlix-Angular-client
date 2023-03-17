@@ -1,0 +1,23 @@
+$primary: #1c6b2b;
+$secondary: #2fb451;
+$background: #1a1e24;
+$text: #e8e6e3;
+
+.genre {
+  background: $background;
+  color: $text;
+  padding: 3%;
+  max-width: 500px;
+  opacity: 0.97;
+}
+
+.genre-header {
+  justify-content: space-between;
+  padding: 0px 16px 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 1.5vh;
+  right: 1.5vh;
+}
