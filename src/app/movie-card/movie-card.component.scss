@@ -76,6 +76,7 @@ $text: #e8e6e3;
   font-size: smaller;
   justify-content: space-evenly;
   padding: 0 8px 8px 8px;
+  width: -webkit-fill-available;
 }
 
 @media all and (max-width: 300px) {

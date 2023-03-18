@@ -1,0 +1,20 @@
+<mat-card class="synopsis">
+  <mat-card-header class="synopsis-header">
+    <mat-card-title
+      ><h1 class="title">{{ data.Title }}</h1>
+      <h3>
+        Released in {{ data.ReleaseYear }}&nbsp;&nbsp;|&nbsp;&nbsp;Rated
+        {{ data.Rating }}
+      </h3>
+      <p>Starring {{ data.Actors.join(", ") }}</p></mat-card-title
+    >
+    <mat-card-actions>
+      <button class="close-button" mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card-header>
+  <mat-card-content class="description">{{
+    data.Description
+  }}</mat-card-content>
+</mat-card>
