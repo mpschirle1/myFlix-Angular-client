@@ -1,0 +1,19 @@
+$primary: #1c6b2b;
+$secondary: #2fb451;
+$background: #1a1e24;
+$text: #e8e6e3;
+
+.navbar {
+  background: $background;
+  color: $text;
+  justify-content: space-between;
+
+  a:hover {
+    color: $secondary;
+  }
+}
+.home {
+  font-size: 1.75em;
+  font-family: "Rubik Dirt", cursive;
+  font-weight: 400;
+}

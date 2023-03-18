@@ -1,0 +1,12 @@
+<mat-toolbar class="navbar">
+  <span>
+    <a mat-button class="home">myFlix</a>
+  </span>
+  <span>
+    <a mat-button><mat-icon>person</mat-icon>{{ username }}&nbsp;&nbsp;</a>
+    <a mat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Sign Out</span>
+    </a>
+  </span>
+</mat-toolbar>
