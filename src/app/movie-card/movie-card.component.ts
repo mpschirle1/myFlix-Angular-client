@@ -4,6 +4,7 @@ import { GenreComponent } from '../genre/genre.component';
 import { DirectorComponent } from '../director/director.component';
 import { SynopsisComponent } from '../synopsis/synopsis.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-movie-card',
@@ -12,13 +13,17 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class MovieCardComponent {
   movies: any[] = [];
+  favorites: any[] = [];
+
   constructor(
     public fetchApiData: FetchApiDataService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
     this.getMovies();
+    this.getFavorites();
   }
 
   getMovies(): void {
@@ -27,6 +32,36 @@ export class MovieCardComponent {
       console.log(this.movies);
       return this.movies;
     });
+  }
+
+  getFavorites(): void {
+    this.fetchApiData.getUser().subscribe((response: any) => {
+      this.favorites = response.FavoriteMovies;
+      console.log(this.favorites);
+      return this.favorites;
+    });
+  }
+
+  toggleFavorite(movieId: string, title: string): void {
+    if (!this.favorites.includes(movieId)) {
+      this.fetchApiData.addFavorite(movieId).subscribe((response: any) => {
+        this.favorites = response.FavoriteMovies;
+        this.snackBar.open(title + ' has been added to your favorites.', 'OK', {
+          duration: 4000,
+        });
+      });
+    } else {
+      this.fetchApiData.removeFavorite(movieId).subscribe((response: any) => {
+        this.favorites = response.FavoriteMovies;
+        this.snackBar.open(
+          title + ' has been removed from your favorites.',
+          'OK',
+          {
+            duration: 4000,
+          }
+        );
+      });
+    }
   }
 
   openGenreDialog(name: string, description: string): void {
