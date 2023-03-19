@@ -1,0 +1,132 @@
+$primary: #1c6b2b;
+$secondary: #2fb451;
+$background: #1a1e24;
+$text: #e8e6e3;
+
+.profile {
+  background: linear-gradient(45deg, $primary, #004f87, #008765, #2a315d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: $text;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+  padding-top: 4.5rem;
+  margin: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.profile-card {
+  width: 40vw;
+  margin: auto;
+  padding: 3%;
+  background: $background;
+  color: $text;
+  box-shadow: 2px 1px 10px 0.5px #000;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    color: $background;
+  }
+
+  .edit-button {
+    background-color: $primary;
+  }
+}
+
+.username {
+  margin: 2%;
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.favorites-header {
+  margin-top: 2%;
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.card-header {
+  display: inline;
+  text-align: center;
+  font-size: 1.25em;
+  margin-bottom: 7%;
+  padding: 0;
+}
+
+.mdc-card__actions {
+  justify-content: space-between;
+  padding: 15px 15px 8px 15px;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.favorite-poster {
+  width: 100%;
+  margin-top: 2.5%;
+  overflow: hidden;
+  filter: drop-shadow(3px 3px 3px #000);
+  img {
+    height: 200px;
+    margin: 1vh;
+    border-radius: 3px;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .profile-card {
+    width: 80vw;
+  }
+  .username,
+  .favorites-header {
+    font-size: 1.5em;
+    margin: 3%;
+  }
+}
+
+@media all and (min-width: 300px) and (max-width: 500px) {
+  .profile-card {
+    width: 80vw;
+  }
+  .username,
+  .favorites-header {
+    font-size: 1.75em;
+    margin: 3%;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 1000px) {
+  .profile-card {
+    width: 60vw;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .profile-card {
+    width: 40vw;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  .profile-card {
+    width: 30vw;
+  }
+}

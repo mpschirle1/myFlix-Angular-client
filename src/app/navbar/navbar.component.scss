@@ -7,6 +7,14 @@ $text: #e8e6e3;
   background: $background;
   color: $text;
   justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  opacity: 0.95;
+  filter: drop-shadow(0 5px 5px #000);
+
+  a {
+    text-decoration: none;
+  }
 
   a:hover {
     color: $secondary;
@@ -16,4 +24,11 @@ $text: #e8e6e3;
   font-size: 1.75em;
   font-family: "Rubik Dirt", cursive;
   font-weight: 400;
+  align-items: center;
+}
+
+.app-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

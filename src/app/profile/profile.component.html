@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+<div class="profile">
+  <h1 class="username">{{ user.Username }}</h1>
+  <mat-card class="profile-card">
+    <mat-card-header class="card-header">
+      <mat-card-title>Update your profile:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <mat-icon matPrefix>person</mat-icon>
+          <input
+            matInput
+            [(ngModel)]="userUpdate.Username"
+            value="{{ userUpdate.Username }}"
+            placeholder="{{ user.Username }}"
+            type="text"
+            name="Username"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon matPrefix>key</mat-icon>
+          <input
+            matInput
+            [(ngModel)]="userUpdate.Password"
+            value="{{ userUpdate.Password }}"
+            type="password"
+            placeholder="Password"
+            name="Password"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon matPrefix>email</mat-icon>
+          <input
+            matInput
+            [(ngModel)]="userUpdate.Email"
+            value="{{ userUpdate.Email }}"
+            type="email"
+            placeholder="{{ user.Email }}"
+            name="Email"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon matPrefix>calendar_today</mat-icon>
+          <input
+            matInput
+            [(ngModel)]="userUpdate.Birthday"
+            value="{{ userUpdate.Birthday }}"
+            type="text"
+            placeholder="{{ user.Birthday | date }}"
+            onfocus="(this.type = 'date')"
+            name="Birthday"
+          />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        class="edit-button"
+        mat-raised-button
+        color="primary"
+        (click)="updateUser()"
+      >
+        <mat-icon>edit</mat-icon>
+        Update
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="deleteUser(user.Username)"
+      >
+        <mat-icon>delete_forever</mat-icon>
+        Delete Account
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <h1 class="favorites-header">Your Favorite Movies:</h1>
+  <div class="favorites-list">
+    <div
+      class="favorite-card"
+      *ngFor="let favorite of favoriteMovies; let i = index"
+    >
+      <div class="favorite-poster">
+        <img src="{{ favorite.ImagePath }}" alt="{{ favorite.Title }}" />
+      </div>
+    </div>
+  </div>
+</div>

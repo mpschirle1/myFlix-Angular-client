@@ -17,7 +17,7 @@ $text: #e8e6e3;
   width: 100%;
   position: absolute;
   overflow: auto;
-  padding-top: 0.5%;
+  padding-top: 4.5rem;
 
   .mat-mdc-button {
     color: $secondary;
@@ -83,9 +83,6 @@ $text: #e8e6e3;
   justify-content: space-evenly;
   padding: 0 8px 8px 8px;
   width: -webkit-fill-available;
-}
-
-.favorite {
 }
 
 @media all and (max-width: 300px) {

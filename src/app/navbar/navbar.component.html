@@ -1,9 +1,17 @@
 <mat-toolbar class="navbar">
+  <div class="app-logo">
+    <img src="assets/myflix-logo.png" width="45" height="45" />
+    <span class="app-logo">
+      <p class="home">&nbsp;myFlix</p>
+    </span>
+  </div>
   <span>
-    <a mat-button class="home">myFlix</a>
-  </span>
-  <span>
-    <a mat-button><mat-icon>person</mat-icon>{{ username }}&nbsp;&nbsp;</a>
+    <a mat-button routerLink="/movies"
+      ><mat-icon>movie</mat-icon>Movies&nbsp;&nbsp;</a
+    >
+    <a mat-button routerLink="/profile"
+      ><mat-icon>person</mat-icon>{{ username }}&nbsp;&nbsp;</a
+    >
     <a mat-button (click)="logout()">
       <mat-icon>logout</mat-icon>
       <span>Sign Out</span>
