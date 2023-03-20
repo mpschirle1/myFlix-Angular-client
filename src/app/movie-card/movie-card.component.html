@@ -27,7 +27,9 @@
       >
     </mat-card-header>
     <mat-card-actions>
-      {{ movie.ReleaseYear }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ movie.Rating }}
+      <span class="year-rating">
+        {{ movie.ReleaseYear }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ movie.Rating }}
+      </span>
       <button
         mat-button
         color="primary"

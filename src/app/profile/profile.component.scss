@@ -35,13 +35,14 @@ $text: #e8e6e3;
   background: $background;
   color: $text;
   box-shadow: 2px 1px 10px 0.5px #000;
-
   form {
     display: flex;
     flex-direction: column;
     color: $background;
   }
-
+  input {
+    text-overflow: ellipsis;
+  }
   .edit-button {
     background-color: $primary;
   }
@@ -91,14 +92,49 @@ $text: #e8e6e3;
   }
 }
 
+.no-favorites {
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
 @media all and (max-width: 300px) {
   .profile-card {
     width: 80vw;
+    form {
+      font-size: smaller;
+    }
   }
-  .username,
-  .favorites-header {
+  .edit-button {
+    font-size: x-small;
+  }
+  .mat-mdc-unelevated-button > .mat-icon,
+  .mat-mdc-raised-button > .mat-icon,
+  .mat-mdc-outlined-button > .mat-icon {
+    display: none;
+  }
+  .delete-button {
+    margin-left: 5%;
+    font-size: x-small;
+  }
+  .delete-icon {
+    display: none;
+  }
+  .card-header {
+    font-size: 1em;
+  }
+  .username {
     font-size: 1.5em;
-    margin: 3%;
+    margin: 0 0 5% 0;
+  }
+  .favorites-header {
+    font-size: 1.25em;
+    margin: 5% 0 3% 0;
+  }
+  .favorite-poster {
+    img {
+      height: 100%;
+      width: 80vw;
+    }
   }
 }
 
@@ -106,10 +142,19 @@ $text: #e8e6e3;
   .profile-card {
     width: 80vw;
   }
-  .username,
+  .username {
+    font-size: 1.5em;
+    margin: 0 0 3% 0;
+  }
   .favorites-header {
-    font-size: 1.75em;
-    margin: 3%;
+    font-size: 1.5em;
+    margin: 5% 0 3% 0;
+  }
+  .favorite-poster {
+    img {
+      height: 100%;
+      width: 40vw;
+    }
   }
 }
 

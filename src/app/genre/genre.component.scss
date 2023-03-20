@@ -21,3 +21,27 @@ $text: #e8e6e3;
   top: 1.5vh;
   right: 1.5vh;
 }
+
+@media all and (max-width: 300px) {
+  .genre-name {
+    font-size: 1em;
+  }
+
+  .genre-description {
+    font-size: 0.75em;
+  }
+
+  .close-button {
+    top: 0.25vh;
+    right: 0.25vh;
+  }
+}
+
+@media all and (min-width: 300px) and (max-width: 600px) {
+  .genre-name {
+    font-size: 1.25em;
+  }
+  .genre-description {
+    font-size: 1em;
+  }
+}

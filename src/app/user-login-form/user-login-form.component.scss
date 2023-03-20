@@ -5,10 +5,15 @@ $text: #e8e6e3;
 mat-card {
   background-color: $background;
   color: $background;
-  max-width: 500px;
   margin: auto;
-  padding: 20px;
+  padding: 3%;
   flex-direction: column;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    color: $background;
+  }
 
   button {
     background-color: $primary;

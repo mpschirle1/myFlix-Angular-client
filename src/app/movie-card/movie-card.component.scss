@@ -85,6 +85,10 @@ $text: #e8e6e3;
   width: -webkit-fill-available;
 }
 
+.year-rating {
+  padding-left: inherit;
+}
+
 @media all and (max-width: 300px) {
   .movie-card {
     margin: 1.5%;
@@ -93,6 +97,9 @@ $text: #e8e6e3;
 
   .movie-poster {
     height: 380px;
+  }
+  .year-rating {
+    display: none;
   }
 }
 

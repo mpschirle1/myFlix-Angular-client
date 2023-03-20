@@ -2,11 +2,13 @@
   <mat-card-header class="synopsis-header">
     <mat-card-title
       ><h1 class="title">{{ data.Title }}</h1>
-      <h3>
+      <h3 class="year-rating">
         Released in {{ data.ReleaseYear }}&nbsp;&nbsp;|&nbsp;&nbsp;Rated
         {{ data.Rating }}
       </h3>
-      <p>Starring {{ data.Actors.join(", ") }}</p></mat-card-title
+      <p class="actors">
+        Starring {{ data.Actors.join(", ") }}
+      </p></mat-card-title
     >
     <mat-card-actions>
       <button class="close-button" mat-icon-button mat-dialog-close>

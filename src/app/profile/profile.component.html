@@ -68,17 +68,21 @@
         Update
       </button>
       <button
+        class="delete-button"
         mat-raised-button
         color="warn"
         (click)="deleteUser(user.Username)"
       >
-        <mat-icon>delete_forever</mat-icon>
+        <mat-icon class="delete-icon">delete_forever</mat-icon>
         Delete Account
       </button>
     </mat-card-actions>
   </mat-card>
   <h1 class="favorites-header">Your Favorite Movies:</h1>
   <div class="favorites-list">
+    <div>
+      <p class="no-favorites">{{ noFavorites }}</p>
+    </div>
     <div
       class="favorite-card"
       *ngFor="let favorite of favoriteMovies; let i = index"

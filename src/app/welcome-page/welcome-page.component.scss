@@ -32,6 +32,7 @@ $text: #e8e6e3;
 .welcome-card {
   margin: 25vh auto auto auto;
   flex-direction: column;
+  text-align: center;
   box-shadow: 2px 1px 10px 0.5px #000;
   background: $background;
   padding: 3%;
@@ -43,4 +44,13 @@ $text: #e8e6e3;
 
 .mdc-card__actions {
   justify-content: space-evenly;
+}
+
+@media all and (max-width: 400px) {
+  .welcome-card {
+    width: 85vw;
+  }
+  .welcome {
+    font-size: 1.5em;
+  }
 }

@@ -27,8 +27,41 @@ $text: #e8e6e3;
   align-items: center;
 }
 
+.icon {
+  width: 45px;
+  height: 45px;
+}
+
 .app-logo {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+@media all and (max-width: 450px) {
+  .home {
+    font-size: 1em;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navlink-text {
+    display: none;
+  }
+}
+
+@media all and (min-width: 300px) and (max-width: 600px) {
+  .home {
+    font-size: 1em;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navlink-text {
+    font-size: 0.75em;
+  }
 }

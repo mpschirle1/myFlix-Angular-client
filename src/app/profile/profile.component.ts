@@ -12,6 +12,7 @@ export class ProfileComponent {
   user: any = {};
   movies: any[] = [];
   favoriteMovies: any[] = [];
+  noFavorites: string = '';
 
   @Input() userUpdate = {
     Username: '',
@@ -96,7 +97,9 @@ export class ProfileComponent {
         this.favoriteMovies = allMovies.filter((movie) =>
           favorites.includes(movie._id)
         );
-        console.log(this.favoriteMovies);
+        this.favoriteMovies.length !== 0
+          ? (this.noFavorites = '')
+          : (this.noFavorites = 'You have not added any favorite movies yet!');
         return this.favoriteMovies;
       });
     });
