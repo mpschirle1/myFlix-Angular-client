@@ -65,7 +65,7 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  updateUser(userUpdate: any): Observable<any> {
+  updateUser(userUpdate: any = {}): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
     return this.http
@@ -80,7 +80,9 @@ export class FetchApiDataService {
     return this.http
       .delete(apiUrl + 'users/' + username, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
+        responseType: 'text',
       })
+
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 

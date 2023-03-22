@@ -72,15 +72,14 @@ export class ProfileComponent {
         'Warning! This will permanantly delete your account. Do you wish to proceed?'
       )
     ) {
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
       this.router.navigate(['welcome']).then(() => {
+        localStorage.clear();
         this.snackBar.open('Your account has been deleted.', 'OK', {
           duration: 4000,
         });
       });
     }
-    this.fetchApiData.deleteUser(username).subscribe((response) => {
+    this.fetchApiData.deleteUser(username).subscribe((response: any) => {
       console.log(response);
     });
   }
