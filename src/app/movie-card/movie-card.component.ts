@@ -26,6 +26,12 @@ export class MovieCardComponent {
     this.getFavorites();
   }
 
+  /**
+   * API call through fetchApiData service to get all movies
+   * @returns Array containing all movies
+   * @function getMovies
+   */
+
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((response: any) => {
       this.movies = response;
@@ -33,12 +39,27 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * API call through fetchApiData service to get user's favorites
+   * @returns Array containing user's favorites (by movie ID)
+   * @function getFavorites
+   */
+
   getFavorites(): void {
     this.fetchApiData.getUser().subscribe((response: any) => {
       this.favorites = response.FavoriteMovies;
       return this.favorites;
     });
   }
+
+  /**
+   * Logic for toggle favorite button. Makes API calls through fetchApiData
+   * service to post/delete to/from user's favorite movies
+   * @param {string} movieId
+   * @param {string} title
+   * @returns Updated user favorites list
+   * @function toggleFavorite
+   */
 
   toggleFavorite(movieId: string, title: string): void {
     if (!this.favorites.includes(movieId)) {
@@ -62,6 +83,13 @@ export class MovieCardComponent {
     }
   }
 
+  /**
+   * Opens the Genre Info dialog when user clicks on the genre name
+   * @param {string} name
+   * @param {string} description
+   * @function openGenreDialog
+   */
+
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreComponent, {
       data: {
@@ -70,6 +98,13 @@ export class MovieCardComponent {
       },
     });
   }
+
+  /**
+   * Opens the Director Info dialog when user clicks on the director's name
+   * @param {string} name
+   * @param {string} description
+   * @function openDirectorDialog
+   */
 
   openDirectorDialog(
     name: string,
@@ -86,6 +121,16 @@ export class MovieCardComponent {
       },
     });
   }
+
+  /**
+   * Opens the movie synopsis dialog when the user clicks the synopsis button
+   * @param {string} title
+   * @param {string} releaseYear
+   * @param {string} rating
+   * @param {string} description
+   * @param {string} actors
+   * @function openSynopsisDialog
+   */
 
   openSynopsisDialog(
     title: string,

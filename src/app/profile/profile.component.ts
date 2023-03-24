@@ -32,6 +32,12 @@ export class ProfileComponent {
     this.filterFavorites();
   }
 
+  /**
+   * API call through fetchApiData service to get user data
+   * @returns User object (Username, Password, Email, Birthday, Favorites)
+   * @function getUser
+   */
+
   getUser(): void {
     this.fetchApiData.getUser().subscribe((response: any) => {
       this.user = {
@@ -42,12 +48,18 @@ export class ProfileComponent {
     });
   }
 
+  // Properly formats date for user birthday
   formatBirthday(birthday: string) {
     let date = new Date(birthday);
     return `${
       date.getMonth() + 1
     }/${date.getUTCDate()}/${date.getUTCFullYear()}`;
   }
+
+  /**
+   * API call through fetchApiData service to update user data
+   * @function updateUser
+   */
 
   updateUser(): void {
     this.fetchApiData.updateUser(this.userUpdate).subscribe(
@@ -66,6 +78,12 @@ export class ProfileComponent {
     );
   }
 
+  /**
+   * API call through fetchApiData service to delete a user
+   * @param {string} username
+   * @function deleteUser
+   */
+
   deleteUser(username: string): void {
     if (
       confirm(
@@ -83,6 +101,12 @@ export class ProfileComponent {
       console.log(response);
     });
   }
+
+  /**
+   * Filter through all movies to find user favorites
+   * @returns Array containing user's favorite movies
+   * @function filterFavorites
+   */
 
   filterFavorites(): void {
     this.fetchApiData.getUser().subscribe((response: any) => {
