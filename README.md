@@ -1,27 +1,47 @@
-# MyFlixAngularClient
+# myFlix Client Angular Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+<img src="src/assets/myflix-angular-screenshot_1.png">  
+<pre><img src="src/assets/myflix-angular-screenshot_2.png" width="475">   <img src="src/assets/myflix-angular-screenshot_3.png" width="475"></pre>
 
-## Development server
+## About
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is the client-side for an application called myFlix based on its existing server-side code (REST API and database). This SPA uses the MEAN stack and allows users to view information about movies, genres and directors. Users are able to register, add or remove movies from their favorites, and update their profile information.
 
-## Code scaffolding
+## Dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<pre>
+"@angular/animations": "^15.2.0",
+"@angular/cdk": "^15.2.2",
+"@angular/common": "^15.2.0",
+"@angular/compiler": "^15.2.0",
+"@angular/core": "^15.2.0",
+"@angular/forms": "^15.2.0",
+"@angular/material": "^15.2.2",
+"@angular/platform-browser": "^15.2.0",
+"@angular/platform-browser-dynamic": "^15.2.0",
+"@angular/router": "^15.2.0",
+"rxjs": "~7.8.0",
+"tslib": "^2.3.0",
+"zone.js": "~0.12.0"
+</pre>
 
-## Build
+#### Dev Dependencies
+<pre>
+"@angular-devkit/build-angular": "^15.2.2",
+"@angular/cli": "~15.2.2",
+"@angular/compiler-cli": "^15.2.0",
+"@types/jasmine": "~4.3.0",
+"angular-cli-ghpages": "^1.0.5",
+"jasmine-core": "~4.5.0",
+"karma": "~6.4.0",
+"karma-chrome-launcher": "~3.1.0",
+"karma-coverage": "~2.2.0",
+"karma-jasmine": "~5.1.0",
+"karma-jasmine-html-reporter": "~2.0.0",
+"typedoc": "^0.23.28",
+"typescript": "~4.9.4"
+</pre>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Link
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+MyFlix Angular Client (https://mpschirle1.github.io/myFlix-Angular-client/)
