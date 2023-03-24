@@ -1,7 +1,7 @@
 # myFlix Client Angular Application
 
 <img src="src/assets/myflix-angular-screenshot_1.png">  
-<pre><img src="src/assets/myflix-angular-screenshot_2.png" width="475">   <img src="src/assets/myflix-angular-screenshot_3.png" width="475"></pre>
+<pre><img src="src/assets/myflix-angular-screenshot_2.png" width="400">   <img src="src/assets/myflix-angular-screenshot_3.png" width="400"></pre>
 
 ## About
 
