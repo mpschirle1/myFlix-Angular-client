@@ -3,6 +3,10 @@
 <img src="src/assets/myflix-angular-screenshot_1.png">  
 <pre><img src="src/assets/myflix-angular-screenshot_2.png" width="400"> <img src="src/assets/myflix-angular-screenshot_3.png" width="400"></pre>
 
+### Link
+
+Live Demo: [MyFlix Angular Client](https://mpschirle1.github.io/myFlix-Angular-client/)
+
 ## About
 
 This is the client-side for an application called myFlix based on its existing server-side code (REST API and database). This SPA uses the MEAN stack and allows users to view information about movies, genres and directors. Users are able to register, add or remove movies from their favorites, and update their profile information.
@@ -41,7 +45,3 @@ This is the client-side for an application called myFlix based on its existing s
 "typedoc": "^0.23.28",
 "typescript": "~4.9.4"
 </pre>
-
-### Link
-
-MyFlix Angular Client (https://mpschirle1.github.io/myFlix-Angular-client/)
